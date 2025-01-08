@@ -159,11 +159,11 @@ function install_hailo() {
 
 function set_gcc_version(){
   if [ "$target_platform" == "rpi" ] || [ "$target_platform" == "rockchip" ]; then
-    gcc_version=9
+    gcc_version=12
   else
     ubuntu_version=$(lsb_release -r | awk '{print $2}' | awk -F'.' '{print $1}')
     if [ $ubuntu_version -eq 20 ]; then
-        gcc_version=9
+        gcc_version=12
     fi
   fi
 }
